@@ -1,0 +1,45 @@
+@mixin label_input {
+    label {
+        float: left;
+        clear: both;
+        font-size: 20px;
+    }
+    input {  
+        clear: both;
+        float: left; 
+        padding: 10px 5px;
+        font-size: 20px; 
+        width: 100%;  
+        border: 1px solid $border-color;
+        margin-bottom: 20px;
+    } 
+
+}
+
+
+body {
+    padding: 0 10px;
+    width: 100%;
+    h2 {
+        text-align: left;
+        background-color: rgb(59, 209, 29);
+        padding: 20px 10px;
+        font-size: 30px;
+        color: white;
+        font-weight: lighter;
+    }
+    div.flex-container {
+        display: flex;
+        div {
+            @include label_input();
+        }
+        div.left {
+            width: 50%; 
+            margin-right: 20px;           
+        }
+        div.right {
+            width: 50%;
+            margin-left: 20px;
+        }        
+    }
+}
